@@ -7,7 +7,7 @@ function createNewVisitor(event) {
   event.preventDefault();
   const nameInput = document.getElementById("visitorNewName");
   const nameString = nameInput.value;
-  console.log(nameString);
+  // console.log(nameString);
   /**
   צרו אורח חדש כאן 👇
   ניתן לפצל את הלוגיקה למספר בלתי מוגבל של פונקציות.
@@ -26,14 +26,12 @@ function createNewVisitor(event) {
 
   const visitorExists = (name) => {
     //מקבל שם ומחזיר תשובה האם השם האורח קיים
-    visitorsForView.forEach((element) => {
-      if (element.name === name) {
-        alert("You already exist, dude!");
-        return true;
-      } else {
-        return false;
-      }
-    });
+    if (visitorsForView.some((visitor) => visitor.name === name)) {
+      alert("You already have a user, dude!");
+      return true;
+    } else {
+      return false;
+    }
   };
 
   const makeVisitor = (name) => {
@@ -51,11 +49,14 @@ function createNewVisitor(event) {
 
   //not working well
   if (!validateFormInputs(nameString)) {
+    console.log(validateFormInputs(nameString));
     return;
   }
+
   if (visitorExists(nameString)) {
     return;
   }
+
   console.log(nameInput.value);
   let some = makeVisitor(nameString);
   console.log(some);
