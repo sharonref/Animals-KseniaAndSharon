@@ -49,6 +49,7 @@ function createNewVisitor(event) {
     return newVisitor;
   };
 
+  //not working well
   if (!validateFormInputs(nameString)) {
     return;
   }

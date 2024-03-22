@@ -9,6 +9,46 @@
     <script src="./main.js"></script>
   </head>
   <body>
+    <div class="header"></div>
+    <div class="zooFilters">
+      <form>
+        <div>
+          <label>Name: </label>
+          <input type="text" placeholder="search name" id="searchName" />
+        </div>
+        <div>
+          <label>Is Predator:</label>
+          <label for="predator">Predator</label>
+          <input type="radio" name="Predator" value="true" id="predator" />
+          <label for="notPredator">Not predator</label>
+          <input type="radio" name="Predator" value="false" id="notPredator" />
+        </div>
+        <div>
+          <label>Habitat:</label>
+          <label for="land">Land</label>
+          <input type="radio" name="Habitat" value="land" id="land" />
+          <label for="sea">Sea</label>
+          <input type="radio" name="Habitat" value="sea" id="sea" />
+        </div>
+        <div>
+          <label>Weight: </label>
+          <input type="number" id="weight-search" placeholder="Min weight" />
+        </div>
+        <div>
+          <label>Height: </label>
+          <input type="number" id="height-search" placeholder="Min height" />
+        </div>
+        <div>
+          <label>Color:</label>
+          <select id="color-search">
+            <option value="">select color:</option>
+            <option value="grey">Grey</option>
+            <option value="brown">Brown</option>
+          </select>
+        </div>
+        <button id="clearBTN">clear</button>
+      </form>
+    </div>
     <div id="animal-cards"></div>
     <script src="zoo.js"></script>
   </body>
