@@ -1,4 +1,5 @@
-// מערכים גלובלים שישמשו אותנו בכל העמודים
+//Global arrays
+
 let visitors = [
   {
     name: "John Smith",
@@ -226,8 +227,8 @@ let animals = [
   },
 ];
 
-// פונקציה זו טוענת עבורכם את המידע ההתחלתי של האפליקציה, במידה וקיים מידע בלוקל סטורג׳, היא תקח אותו משם
-// אל תשנו את הקוד בפונקציה הזו כדי לשמור על תקינות הטמפלייט
+//visitors and animals array -> localStorage
+//Don't touche!
 function generateDataset() {
   if (localStorage.getItem("visitors")) {
     visitors = JSON.parse(localStorage.getItem("visitors"));
@@ -239,13 +240,5 @@ function generateDataset() {
   } else {
     localStorage.setItem("animals", JSON.stringify(animals));
   }
-
-  console.log(visitors);
 }
 generateDataset();
-
-//********************** */
-function logout() {
-  //ממשו את הלוגיקה שמתנתקת מאורח מחובר
-  // שימו לב לנקות את השדה המתאים בלוקל סטורג'
-}

@@ -9,12 +9,34 @@
     <script src="./main.js"></script>
   </head>
   <body>
-    <!-- צרו את הטופס בחירת אורח כאן מעל הסקריפט -->
-    <form>
-      <input type="text" placeholder="search name" id="searchName" />
-    </form>
+    <!-- start Dialog Alart-->
 
-    <div id="visitors-cards"></div>
+    <div id="alart">
+      <dialog id="alertMassege">
+        <h3>Please note!</h3>
+        <p>You already loged in... do you want to logout?</p>
+        <div>
+          <button id="logout">Logout</button>
+          <button id="continue">Go to Zoo</button>
+        </div>
+      </dialog>
+    </div>
+
+    <!-- end Dialog Alart-->
+    <div class="content">
+      <div class="welcome">
+        <h1>Welcome to our zoo!</h1>
+      </div>
+      <div class="form">
+        <form id="login">
+          <label>Did you add a name in mind? </label>
+          <input type="text" placeholder="Search here" id="searchName" />
+        </form>
+      </div>
+
+      <div id="visitors-cards"></div>
+    </div>
+
     <script src="./login.js"></script>
   </body>
 </html>

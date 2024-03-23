@@ -1,0 +1,447 @@
+/*---scroll corection---*/
+
+html {
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+/*****************
+
+----NAVBAR-----
+
+*****************/
+
+.nav {
+  width: 100%;
+}
+
+#header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 0;
+  width: 100%;
+  height: 20%;
+  background-color: rgb(0, 45, 0);
+  padding: 10px 10px 10px 0;
+  color: aliceblue;
+}
+
+.site-header_wrapper {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+
+.nav_wrapper {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  padding: 1%;
+  margin: 1%;
+  align-items: center;
+  gap: 1%;
+}
+
+.nav_wrapper a {
+  color: aliceblue;
+  font-size: larger;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.nav_wrapper div {
+  align-items: center;
+  padding: 1%;
+  margin: 1%;
+}
+
+.nav h1 {
+  font-size: 35px;
+  flex-grow: 2;
+  margin: 1% 1% 1% 5%;
+}
+
+.visitors {
+  margin: 5%;
+}
+
+.navbar {
+  text-align: center;
+}
+
+.navbar p {
+  font-size: 20px;
+  color: rgb(0, 210, 0);
+}
+
+.navbar span {
+  font-size: 22px;
+  color: aliceblue;
+}
+
+#visitorData {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 1%;
+}
+
+/*****************
+
+-----ALL------
+
+*****************/
+
+body {
+  background-image: linear-gradient(
+      0deg,
+      rgba(188, 198, 198, 0.6) 0%,
+      rgba(237, 228, 236, 0.1) 57%
+    ),
+    url("./images/bg.jpeg");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+button {
+  width: 100px;
+  height: 30px;
+  background-color: rgb(0, 128, 0);
+  color: aliceblue;
+}
+
+input {
+  font-size: 18px;
+}
+input::placeholder {
+  opacity: 0.7;
+  font-size: 18px;
+}
+
+/*****************
+
+-----SINGUP------
+
+*****************/
+
+#container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-top: 10%;
+  left: 0;
+  margin: 5% 15% 5% 15%;
+  border: 5px solid rgb(0, 128, 0);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/*---start singup---*/
+
+.signupPage {
+  /* background-color: rgba(0, 128, 0, 0.6); */
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  text-align: center;
+  padding: 2% 0 2% 0;
+}
+.signupPage h1 {
+  font-size: 50px;
+  color: rgb(0, 128, 0);
+  text-shadow: 5px 4px 7px rgba(255, 255, 255);
+}
+
+.signupPage h4 {
+  font-size: 22px;
+  color: rgb(0, 128, 0);
+}
+
+.signupPage a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+/*---end singup---*/
+
+/*---start form---*/
+
+#create-visitor-form {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  text-align: center;
+  padding: 2% 0 2% 0;
+}
+
+#create-visitor-form h4 {
+  font-size: 22px;
+  color: rgb(0, 128, 0);
+}
+
+#form {
+  display: block;
+}
+
+#form > div {
+  margin: 1%;
+  font-size: 18px;
+}
+
+#visitorNewName {
+  width: 150px;
+  height: 30px;
+}
+
+/*---end form---*/
+
+/*****************
+
+-----LOGIN------
+
+*****************/
+
+.contant {
+  display: flex;
+  justify-content: center;
+}
+
+.welcome {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  padding: 2% 0 2% 0;
+  border: 5px solid rgb(0, 128, 0);
+}
+
+.welcome h1 {
+  display: block;
+  font-size: 50px;
+  width: 100%;
+  color: rgb(0, 128, 0);
+  text-shadow: 5px 4px 7px rgba(255, 255, 255);
+}
+
+/*---start NoVisitor---*/
+
+.empty-result {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 2%;
+  margin-top: 5%;
+}
+
+#clear-filter-btn {
+  width: 100px;
+  height: 60px;
+}
+
+/*---start Form---*/
+
+.form {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#login {
+  width: 80%;
+  margin: 1%;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 2%;
+  border: 5px solid rgb(0, 128, 0);
+}
+
+#login label {
+  font-size: 18px;
+  padding-right: 2%;
+}
+
+/*---end Form---*/
+
+/*---start Dialog---*/
+
+#alertMassege {
+  display: none;
+  background-color: rgba(255, 255, 255);
+  border: 5px solid rgb(0, 128, 0);
+  margin-top: 15%;
+  width: 30%;
+}
+
+#alertMassege > div {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#alertMassege h3 {
+  color: rgb(0, 128, 0);
+}
+
+/*---end Dialog---*/
+
+/*****************
+
+---CARDS for ALL---
+
+*****************/
+
+/*---start Cards---*/
+
+#visitors-cards,
+#animal-cards,
+#related-animals,
+#visited-animals,
+#feeded-animals,
+#favorite-animal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.visitor-card,
+.animal-card,
+.dashboard-cards {
+  width: 20%;
+  height: 50%;
+  border: 5px solid rgb(0, 128, 0);
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 2%;
+  padding: 2%;
+  box-shadow: 6px 6px 5px rgb(0, 128, 0);
+}
+
+.visitor-card img,
+.animal-card img,
+.wrapper-animal img {
+  width: 100%;
+  border-radius: 100%;
+  margin: 0 auto;
+  box-shadow: 2px 12px 5px rgb(0, 128, 0);
+}
+
+/*card for animal start*/
+#placeholder {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-animal {
+  width: 30%;
+  height: 50%;
+  text-align: center;
+  align-self: center;
+  border: 5px solid rgb(0, 128, 0);
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 2%;
+  padding: 2%;
+  box-shadow: 6px 6px 5px rgb(0, 128, 0);
+}
+
+#feedMe {
+  width: 50%;
+  display: flex;
+  position: relative;
+  left: 45%;
+  padding-top: 5%;
+}
+/*card for animal end*/
+
+/*cards for dashboard start*/
+
+.dashboard-cards h4 {
+  font-size: 20px;
+}
+
+.dashboard-cards img {
+  width: 100%;
+  border-radius: 100%;
+  margin: 0 auto;
+  box-shadow: 2px 12px 5px rgb(0, 128, 0);
+}
+/*cards for dashboard end*/
+/*---end Cards---*/
+
+/*****************
+
+-------ZOO--------
+
+*****************/
+
+/*---start Form---*/
+.zooFilters {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2%;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 5px solid rgb(0, 128, 0);
+}
+
+#zoo {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(0, 128, 0, 0.5);
+  border: 5px solid rgb(0, 128, 0);
+  justify-content: space-evenly;
+  gap: 0;
+}
+
+.outside {
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  margin: 2%;
+  border: 3px solid rgb(0, 128, 0);
+  flex-grow: 2;
+  padding: 2%;
+}
+
+.inside {
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+}
+
+#zoo div label {
+  display: block;
+  padding: 1%;
+}
+
+#color-search {
+  font-size: 18px;
+}
+
+#clearBTN {
+  display: block;
+  margin: 2%;
+  font-size: 20px;
+}
+/*---end Form---*/
+
+/*****************
+
+----DASHBOARD-----
+
+*****************/
+#allDashboards {
+  display: block;
+}
+
+.dashboard {
+  width: 100vw;
+  margin: 0;
+}
+
+.dashboard h3 {
+  background-color: rgba(255, 255, 255, 0.6);
+  font-size: 25px;
+  text-align: center;
+  border: 5px solid rgb(0, 128, 0);
+  width: 100%;
+  margin: 0 auto;
+}

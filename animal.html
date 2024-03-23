@@ -9,19 +9,43 @@
     <script src="./main.js"></script>
   </head>
   <body>
+    <header id="header-wrapper">
+      <nav class="nav">
+      <div class="site-header_wrapper">
+        <h1 class="zooData">ZooLand</h1>
+        
+          <ul class="nav_wrapper">
+            <li class="nav_item">
+              <a href="./zoo.html">Zoo</a>
+            </li>
+            <li class="nav_item">
+              <a href="./signup.html">Signup</a>
+            </li>
+            <li class="nav_item">
+              <a href="./login.html">Login</a>
+            </li>
+            <li class="nav_item"><a href="./dashboard.html">Dashboard</a></li>
+            <div id="visitorData"></div>
+          <div>
+            <p>All Users</p>
+            <select id="visitors">
+              
+            </select>
+          </div>
+        
+        <button id="reset">Reset</button>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <div>
       <div id="image">
-        <!-- show here the animal image -->
+      </div>
+      <div id="feedMe">
+        <button id="feed-animal">Feed me</button>
       </div>
       <div id="placeholder">
-        <!-- <h1 id="name"></h1>
-        <p id="weight"></p>
-        <p id="height"></p>
-        <p id="color"></p>
-        <p id="habitat"></p>
-        <p id="isPredator"></p> -->
       </div>
-      <button id="feed-animal">Feed me</button>
     </div>
     <div id="related-animals"></div>
     <script src="./animal.js"></script>

@@ -9,26 +9,32 @@
     <script src="./main.js"></script>
   </head>
   <body>
-    <div class="signupPage">
-      <h1>Welcome to our zoo!</h1>
-    </div>
-    <form id="create-visitor-form">
-      <div>
-        <h4>please signup</h4>
-        <label for="visitorNewName">Name: </label>
-        <input type="text" placeholder="name here" id="visitorNewName" />
-        <button type="submit">signup</button>
+    <div id="container">
+      <div class="signupPage">
+        <h1>Welcome to our zoo!</h1>
       </div>
-    </form>
-    <div class="signupPage">
-      <h4>already have a user?</h4>
-      <p>please go to login</p>
-      <button><a href="./login.html">login</a></button>
+      <form id="create-visitor-form">
+        <div id="form">
+          <div>
+            <h4>Please signup :)</h4>
+          </div>
+          <div>
+            <label for="visitorNewName">Your Full Name : </label>
+          </div>
+          <div>
+            <input type="text" placeholder="Name here" id="visitorNewName" />
+          </div>
+          <div>
+            <button type="submit">Signup</button>
+          </div>
+        </div>
+      </form>
+      <div class="signupPage">
+        <h4>Already have a user?</h4>
+        <p>Please go to login</p>
+        <button><a href="./login.html">Login</a></button>
+      </div>
     </div>
-    <!-- צרו טופס יצירת אורח חדש -->
-    <!-- לאחר יצירה, הוסיפו אותו למערך האורחים ושמרו את מערך האורחים המעודכן בלוקל סטורג' -->
-    <!-- עברו לעמוד התחברות כדי לבחור את האורח שאיתו תכנסו לגן החיות -->
-    <!-- ממשו את הלוגיקה של היצירה, בפונקציה שהוגדרה מראש בקובץ signup.js -->
     <script src="./signup.js"></script>
   </body>
 </html>

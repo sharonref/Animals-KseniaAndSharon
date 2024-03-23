@@ -1,20 +1,33 @@
 let animalsForView = JSON.parse(localStorage.getItem("animals"));
 let visitorsForView = JSON.parse(localStorage.getItem("visitors"));
-//console.log(visitorsForView);
 
 //make it a dialog
 if (localStorage.getItem("currentVisitor")) {
-  alert("You already loged in...");
-  window.location.href = "./zoo.html";
+  const dialog = document.getElementById("alertMassege");
+  const btnLogout = document.getElementById("logout");
+  const btnContinue = document.getElementById("continue");
+
+  dialog.style.display = "block";
+  dialog.showModal();
+
+  btnLogout.addEventListener("click", () => {
+    localStorage.removeItem("currentVisitor");
+    window.location.href = "./signup.html";
+    dialog.close();
+  });
+
+  btnContinue.addEventListener("click", () => {
+    window.location.href = "./zoo.html";
+    dialog.close();
+  });
 }
 
 function createHTML(visitor) {
   const newDiv = document.createElement("div");
   newDiv.className = "visitor-card";
   newDiv.innerHTML = `<img src="${visitor.image}" alt="${visitor.name} "/>
-  <h2>name: ${visitor.name} </h2>
+  <h2>Name: ${visitor.name} </h2>
   <p>Coins: ${visitor.coins}</p>`;
-  //console.log(newDiv);
 
   newDiv.addEventListener("click", () => {
     loginAsVisitor(visitor);
@@ -49,7 +62,6 @@ const clearSearchBox = () => {
 function renderVisitors() {
   const visitorsCards = document.getElementById("visitors-cards");
   visitorsCards.innerHTML = "";
-  // const visitorsForViewArray = [...visitors];
   visitorsForView.forEach((visitor) => {
     visitorsCards.append(createHTML(visitor));
   });
@@ -70,8 +82,6 @@ nameInput.addEventListener("input", () => {
 });
 
 function loginAsVisitor(visitor) {
-  // תממשו את הלוגיקה של בחירת אורח שנכנס לגן החיות
-  // שמרו את האורח שבחרתם, בלוקל סטורג' כך שבכל העמודים נדע מי האורח הנוכחי
   localStorage.setItem("currentVisitor", JSON.stringify(visitor));
   window.location.href = "./zoo.html";
 }

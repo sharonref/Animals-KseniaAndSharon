@@ -2,18 +2,9 @@ let animalsForView = JSON.parse(localStorage.getItem("animals"));
 let visitorsForView = JSON.parse(localStorage.getItem("visitors"));
 
 function createNewVisitor(event) {
-  // ביטול התנהגות דיפולטיבית של שליחת טופס
-  // קראו עוד כאן: https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
   event.preventDefault();
   const nameInput = document.getElementById("visitorNewName");
   const nameString = nameInput.value;
-  // console.log(nameString);
-  /**
-  צרו אורח חדש כאן 👇
-  ניתן לפצל את הלוגיקה למספר בלתי מוגבל של פונקציות.
-  כמו שיותר מפוצל וטהור - פונקציות עם מטרה יחידה ושם משמעותי שמסביר מה הפונקציה עושה ומחזירה
-  דוגמא:
-  **/
 
   function validateFormInputs(value) {
     if (!value) {
@@ -25,7 +16,6 @@ function createNewVisitor(event) {
   }
 
   const visitorExists = (name) => {
-    //מקבל שם ומחזיר תשובה האם השם האורח קיים
     if (visitorsForView.some((visitor) => visitor.name === name)) {
       alert("You already have a user, dude!");
       return true;
@@ -35,11 +25,10 @@ function createNewVisitor(event) {
   };
 
   const makeVisitor = (name) => {
-    //מקבל שם, בודק שאין אותו כבר במערך האורחים ומחזיר אובייקט אורח
     let newVisitor = {
       name: name,
       coins: 50,
-      image: "./images/Avatars1.jpeg",
+      image: "./images/new.jpeg",
       visited: [],
       feeded: [],
     };
@@ -47,7 +36,6 @@ function createNewVisitor(event) {
     return newVisitor;
   };
 
-  //not working well
   if (!validateFormInputs(nameString)) {
     console.log(validateFormInputs(nameString));
     return;

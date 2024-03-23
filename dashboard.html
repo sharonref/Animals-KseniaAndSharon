@@ -9,9 +9,58 @@
     <script src="./main.js"></script>
   </head>
   <body>
-    <div id="visited-animals"></div>
-    <div id="feeded-animals"></div>
-    <div id="favorite-animal"></div>
+    <header id="header-wrapper">
+      <nav class="nav">
+      <div class="site-header_wrapper">
+        <h1 class="zooData">ZooLand</h1>
+        
+          <ul class="nav_wrapper">
+            <li class="nav_item">
+              <a href="./zoo.html">Zoo</a>
+            </li>
+            <li class="nav_item">
+              <a href="./signup.html">Signup</a>
+            </li>
+            <li class="nav_item">
+              <a href="./login.html">Login</a>
+            </li>
+            <li class="nav_item"><a href="./dashboard.html">Dashboard</a></li>
+            <div id="visitorData"></div>
+          <div>
+            <p>All Users</p>
+            <select id="visitors">
+              
+            </select>
+          </div>
+        <button id="reset">Reset</button>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div id="allDashboards">
+      <div class="dashboard">
+      <div>
+
+        <h3 >Visited Animals:</h3>
+      </div>
+      <div id="visited-animals"></div>
+    </div>
+    <div class="dashboard">
+      <div>
+
+        <h3 class="dashboard">Feeded Animals:</h3>
+      </div>
+      <div id="feeded-animals"></div>
+    </div>
+    <div class="dashboard">
+      <div>
+
+        <h3 class="dashboard">Favorite Animal:</h3>
+      </div>
+      <div id="favorite-animal"></div>
+    </div>
+    </div>
+    
     <script src="./dashboard.js"></script>
   </body>
 </html>
